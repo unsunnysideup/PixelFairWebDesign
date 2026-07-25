@@ -22,7 +22,7 @@ body::-webkit-scrollbar{
 
 nav ul {
   list-style-type: none;
-  top: 30px;
+  top: 3%;
   margin: 0;
   padding: 0;
   display: flex;
@@ -35,30 +35,30 @@ ul li a {
   color: #4a3f56;
   padding: 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: clamp(15px, 2vw, 20px);
   font-weight: 400px;
 }
 
 
 #theme-button {
-    padding: 10px;
+    padding: clamp(10px, 2vw, 16px);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     color: white;
-    font-size: 18px;
+    font-size: clamp(10px, 2vw, 18px);
     font-family: "Pixelify Sans";
     background-color: #4a3f56;
    
 }
 
 #motion-button {
-    padding: 10px;
+    padding: clamp(10px, 2vw, 16px);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     color: white;
-    font-size: 18px;
+    font-size: clamp(10px, 2vw, 18px);
     font-family: "Pixelify Sans";
     background-color: #064145;
    
@@ -98,7 +98,7 @@ ul li a {
     font-style: normal;
     line-height: 1;
     letter-spacing: 00;
-    font-size: clamp(1.2rem, 4vw, 5rem);
+    font-size: clamp(1.5rem, 2.5vw, 4.5rem);
     font-weight: 700;
     backdrop-filter: blur(20px);
     height: clamp(40vw, 300px);
@@ -113,7 +113,7 @@ ul li a {
     margin-right: 20%;
     text-align: center;
     font-family: "Pixelify Sans";
-    font-size: 20px;
+    font-size: clamp(1rem, 1.5vw, 3rem);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -268,9 +268,6 @@ input:hover{
     cursor: pointer;
 }
 
-.input[type="checkboxes"] {
-    accent-color: #789a87; 
-}
 
 .checkbox-row {
     display:flex;
@@ -337,7 +334,6 @@ input[type="date"]:focus {
 }
 
 
-
 /* Dark mode styling */
 .dark-mode #intro_header{
     background-image: url(images/dark_image.png);
@@ -391,13 +387,44 @@ input[type="date"]:focus {
     background-color: #BBB5FF;
 }
 
-.dark-mode #animation-button {
+.dark-mode #motion-button {
     background-color: #96c0a8;
 }
 
 .dark-mode .modal-container{
     background-image: url("images/dark_modal.jpg");
 }
+
+.dark-mode input:not([type="checkbox"])::placeholder{
+    color: #ffffff;
+}
+
+.dark-mode input[type="text"]:focus, input[type="email"]:focus{
+    outline: solid #BBB5FF;
+    color: #ffffff;
+}
+
+.dark-mode input:not([type="checkbox"]){
+    background-color: #545272;
+    border: none;
+    outline: none;
+    padding: 12px;
+    width: 60%;
+    align-self: center;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dark-mode input[type="date"]{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+
+}
+
+input[type="date"]:focus {
+  outline: solid #BBB5FF;
+}
+
 
 
 /* animations */
