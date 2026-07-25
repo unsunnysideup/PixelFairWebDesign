@@ -13,6 +13,7 @@ html, body{
     place-self: center;
     background-color: #06414500;
     scroll-behavior: smooth;
+    padding: 0;
 }
 
 body::-webkit-scrollbar{
@@ -79,6 +80,7 @@ ul li a {
     background-size: cover;
     place-content: center;
     align-items: flex-start;
+    background-position: center center;
 }
 
 #heading_text{
@@ -134,6 +136,7 @@ ul li a {
 }
 
 #sec-1, #sec-2{
+    margin:0;
     padding-top: 10%;
     display: flex;
     align-items: center;
@@ -192,8 +195,8 @@ ul li a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left:15%;
-    margin-right: 15%;
+    margin-left:10%;
+    margin-right: 10%;
     flex-wrap: wrap;
     gap: 10%;
 
@@ -225,6 +228,7 @@ ul li a {
     margin-top: 10px;
     flex-wrap: nowrap;
     text-align: left;
+    font-size: clamp(10px, 1.5vw, 20px);
 }
 
 #id-count {
