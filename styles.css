@@ -213,7 +213,7 @@ ul li a {
 }
 
 #rsvp-description {
-    font-size: clamp(12px, 2vw, 24px);
+    font-size: clamp(10px, 2vw, 24px);
 
 }
 
@@ -267,9 +267,6 @@ input:hover{
 .input[type="checkboxes"] {
     accent-color: #789a87; 
 }
-
-
-
 
 .checkbox-row {
     display:flex;
