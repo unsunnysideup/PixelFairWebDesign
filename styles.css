@@ -103,8 +103,6 @@ ul li a {
     backdrop-filter: blur(20px);
     height: clamp(40vw, 300px);
 
-
-
 }
 
 #caption{
@@ -255,6 +253,10 @@ input:not([type="checkbox"]){
     font-family: 'Courier New', Courier, monospace;
 }
 
+input:not(:placeholder-shown) {
+    color: #789a87;
+}
+
 input:not([type="checkbox"])::placeholder{
     color: #789a87;
 }
@@ -399,8 +401,12 @@ input[type="date"]:focus {
     color: #ffffff;
 }
 
-.dark-mode input[type="text"]:focus, input[type="email"]:focus{
+.dark-mode input[type="text"]:focus, .dark-mode input[type="email"]:focus{
     outline: solid #BBB5FF;
+    color: #ffffff;
+}
+
+.dark-mode input:not(:placeholder-shown) {
     color: #ffffff;
 }
 
