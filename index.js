@@ -43,7 +43,7 @@ function addParticipation(person) {
 }
 
 function validateForm() {
-   event.preventDefault()
+   event.preventDefault();
 
    var isValid = true;
    var rsvpInputs = document.getElementById("rsvp-form").elements;
@@ -174,4 +174,25 @@ document.getElementById("leaveModal").addEventListener("click", exitModal);
 
 function exitModal() {
    document.getElementById("success-modal").style.display="None";
+}
+
+document.getElementById("newsletter-form").addEventListener("submit", submitSubscription);
+
+function submitSubscription(event) {
+   event.preventDefault();
+
+   let subscriptionButton = document.getElementById("newsletterSubmit");
+    let subscriptionEmail = document.getElementById("newsletter-email");
+
+   if (subscriptionButton.value === "Sign Up!" && subscriptionEmail.value != "") {
+      subscriptionButton.value = "Thanks for Signing Up!";
+   }
+
+   if (!subscriptionEmail.value.includes('@')) {
+      subscriptionEmail.classList.add('error');
+   } else {
+      subscriptionEmail.classList.remove('error');
+   }
+ 
+
 }

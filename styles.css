@@ -133,7 +133,7 @@ ul li a {
     margin: 20px;
 }
 
-#sec-1, #sec-2{
+section{
     margin:0;
     padding-top: 10%;
     display: flex;
@@ -245,7 +245,7 @@ form {
 
 }
 
-input:not([type="checkbox"]){
+#form input:not([type="checkbox"]){
     padding: 12px;
     width: 60%;
     align-self: center;
@@ -253,15 +253,15 @@ input:not([type="checkbox"]){
     font-family: 'Courier New', Courier, monospace;
 }
 
-input:not(:placeholder-shown) {
+#form input:not(:placeholder-shown) {
     color: #789a87;
 }
 
-input:not([type="checkbox"])::placeholder{
+#form input:not([type="checkbox"])::placeholder{
     color: #789a87;
 }
 
-input[type="text"]:focus, input[type="email"]:focus{
+#form input[type="text"]:focus, input[type="email"]:focus{
     outline: solid #789a87;
     color: #789a87;
 }
@@ -271,7 +271,7 @@ input:hover{
 }
 
 
-.checkbox-row {
+#form .checkbox-row {
     display:flex;
     align-items: flex-start;
     width: 30%;
@@ -279,7 +279,7 @@ input:hover{
 
 }
 
-#checkboxes {
+#form #checkboxes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -287,7 +287,7 @@ input:hover{
     margin: 0 auto;       
 }
 
-label {
+#form label {
     color: #96c0a8;
 }
 
@@ -296,11 +296,10 @@ label {
     display: flex;
 }
 
-input[type="submit"] {
+#form input[type="submit"] {
     padding: 10px;
     margin-left: 20%;
     margin-right: 20%;
-    margin-bottom: 10%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -312,7 +311,7 @@ input[type="submit"] {
 
 }
 
-input[type="submit"]:hover {
+#form input[type="submit"]:hover {
     background-color: rgb(50, 121, 62);
     
 }
@@ -325,15 +324,121 @@ input[type="submit"]:hover {
 
 }
 
-input[type="date"]{
+#form input[type="date"]{
     font-family: 'Courier New', Courier, monospace;
     color: #789a87;
 
 }
 
-input[type="date"]:focus {
+#form input[type="date"]:focus {
   outline: solid #789a87;
 }
+
+#collapsible-texts {
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10%;
+}
+
+
+.collapsible-text {
+    margin-bottom: 5%;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 400;
+    font-style:italic;
+    color: #ffffff;
+}
+
+.faq-answer{
+    font-style: normal;
+    color: #cde5d8
+}
+
+footer {
+    background-color: #3d342a;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c1b6a3;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0% 10%;
+    text-align: center;
+}
+
+#subscribe-heading {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#newsletter-form {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#newsletter-form input{
+    flex: 1;
+    margin: 5px 10px 5px 0;
+}
+
+#newsletter-form input[type="submit"]{
+    background-color: #c1b6a3;
+    max-width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-family: "Pixelify Sans";
+}
+
+#newsletter-form input[type="email"]::placeholder{
+    color: #8a7f6b;
+}
+
+#newsletter-form input[type="email"] {
+    padding: 12px;
+    width: 60%;
+    align-self: center;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #c1b6a3;
+
+}
+
+#newsletter-form input[type="email"]:focus {
+    outline: solid #8a7f6b;
+    color: #8a7f6b;
+
+} 
+
+#newsletter-form input[type="submit"]:hover {
+    background-color: #7f786d;
+
+} 
+
+#social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 0;
+}
+
 
 
 /* Dark mode styling */
@@ -341,7 +446,7 @@ input[type="date"]:focus {
     background-image: url(images/dark_image.png);
 }
 
-.dark-mode, .dark-mode #sec-1, .dark-mode #sec-2{
+.dark-mode section{
     background-color: #010C16;
 }
 
@@ -354,7 +459,7 @@ input[type="date"]:focus {
 
 }
 
-.dark-mode #caption, .dark-mode label, .dark-mode #id-count {
+.dark-mode #caption, .dark-mode #form label, .dark-mode #id-count {
     color: #BECEFF;
 }
 
@@ -363,13 +468,13 @@ input[type="date"]:focus {
     text-shadow: 0 4px 58px rgba(255, 255, 255, 0.80);
 }
 
-.dark-mode input[type="submit"] {
+.dark-mode #form input[type="submit"] {
     color: #ffffff;
     background-color: #665be5;
 
 }
 
-.dark-mode input[type="submit"]:hover {
+.dark-mode #form input[type="submit"]:hover {
     background-color: #293a75;
 }
 
@@ -397,20 +502,20 @@ input[type="date"]:focus {
     background-image: url("images/dark_modal.jpg");
 }
 
-.dark-mode input:not([type="checkbox"])::placeholder{
+.dark-mode #form input:not([type="checkbox"])::placeholder{
     color: #ffffff;
 }
 
-.dark-mode input[type="text"]:focus, .dark-mode input[type="email"]:focus{
+.dark-mode #form input[type="text"]:focus, .dark-mode input[type="email"]:focus{
     outline: solid #BBB5FF;
     color: #ffffff;
 }
 
-.dark-mode input:not(:placeholder-shown) {
+.dark-mode #form input:not(:placeholder-shown) {
     color: #ffffff;
 }
 
-.dark-mode input:not([type="checkbox"]){
+.dark-mode #form input:not([type="checkbox"]){
     background-color: #545272;
     border: none;
     outline: none;
@@ -421,16 +526,58 @@ input[type="date"]:focus {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.dark-mode input[type="date"]{
+.dark-mode #form input[type="date"]{
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
 
 }
 
-input[type="date"]:focus {
+.dark-mode #form input[type="date"]:focus {
   outline: solid #BBB5FF;
 }
 
+.dark-mode .collapsible-text{
+    color: #BECEFF
+}
+
+.dark-mode .faq-answer{
+    color: #ffffff;
+    
+}
+
+.dark-mode footer{
+    background-color: #160a01;
+}
+
+.dark-mode #subscribe-heading, .dark-mode #subscribe-text  {
+    color: #9d7f68;
+    mix-blend-mode: luminosity;
+    text-shadow: 0 4px 58px rgba(255, 255, 255, 0.80);
+}
+
+.dark-mode #newsletter-form input[type="email"] {
+    background-color: #9d7f68;
+    color: #ffffff;
+}
+
+.dark-mode #newsletter-form input[type="email"]::placeholder{
+    color: #ffffff;
+}
+
+.dark-mode #newsletter-form input[type="email"]:hover {
+    outline: solid #9d7f68;
+    color: #ffffff;
+}
+
+.dark-mode #newsletter-form input[type="submit"] {
+    background-color:#9d7f68;
+    color: #ffffff;
+    
+}
+
+.dark-mode #newsletter-form input[type="submit"]:hover {
+    background-color:#5d4a3c;
+} 
 
 
 /* animations */
