@@ -76,7 +76,7 @@ ul li a {
 #intro_header {
     height: 80%;
     width: 100%;
-    background-image: url(images/light_image.png);
+    background-image: url(img/light_image.png);
     background-size: cover;
     place-content: center;
     align-items: flex-start;
@@ -443,7 +443,7 @@ footer {
 
 /* Dark mode styling */
 .dark-mode #intro_header{
-    background-image: url(images/dark_image.png);
+    background-image: url(img/dark_image.png);
 }
 
 .dark-mode section{
@@ -499,7 +499,7 @@ footer {
 }
 
 .dark-mode .modal-container{
-    background-image: url("images/dark_modal.jpg");
+    background-image: url("img/dark_modal.jpg");
 }
 
 .dark-mode #form input:not([type="checkbox"])::placeholder{
@@ -632,7 +632,7 @@ footer {
     border-radius: 20px;
 
     /* Customize modal style here */
-    background-image: url(images/modal.jpg);
+    background-image: url(img/modal.jpg);
     background-size: cover;
     color: black;
     text-align: center;
